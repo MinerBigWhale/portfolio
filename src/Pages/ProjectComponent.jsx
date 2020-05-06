@@ -3,6 +3,7 @@ import projectData from "../static/ProjectData";
 import ProjectCardComponent from "../components/ProjectCardComponent";
 import { ProjectCategoryComponent } from "../components/ProjectCategoryComponent";
 export class ProjectComponent extends React.Component {
+  projectsList = projectData.Projects.reverse();
   breadCrumbLinks() {
     this.props.onHeaderClick();
   }
@@ -56,7 +57,7 @@ export class ProjectComponent extends React.Component {
             className="projects_inner row"
             onClick={this.breadCrumbLinks.bind(this)}
           >
-            {projectData.Projects.reverse().map((details, index) => {
+            {this.projectsList.map((details, index) => {
               return (
                 <ProjectCardComponent
                   key={index}

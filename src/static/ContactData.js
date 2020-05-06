@@ -1,5 +1,4 @@
 export default {
-  GoogleMapKey: "",
   AddressInfo: {
     City: "Jaffna",
     Country: "Sri Lanka",
