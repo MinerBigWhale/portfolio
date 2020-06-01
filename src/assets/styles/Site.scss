@@ -1,6 +1,6 @@
 $dip: #222222;
 $pfont: #777777;
-$rob: "Roboto", sans-serif;
+// $rob: "Roboto", sans-serif;
 $hee: "Heebo", sans-serif;
 $baseColor: #8490ff;
 @mixin transition(
@@ -81,7 +81,7 @@ li {
 body {
   line-height: 26px !important;
   font-size: 16px;
-  font-family: "Roboto", sans-serif;
+  // font-family: "Roboto", sans-serif;
   font-weight: normal;
   color: #777777 !important;
 }
@@ -122,7 +122,7 @@ h6 {
   p {
     max-width: 495px;
     line-height: 24px;
-    font-family: "Roboto", sans-serif;
+    // font-family: "Roboto", sans-serif;
     font-size: 14px;
     margin-bottom: 40px;
     text-align: justify;
@@ -146,7 +146,7 @@ h6 {
   }
   p {
     font-size: 16px;
-    font-family: "Roboto", sans-serif;
+    // font-family: "Roboto", sans-serif;
     line-height: 26px;
     color: #777777;
     margin-bottom: 0px;
@@ -524,7 +524,7 @@ h6 {
   display: inline-block;
   border-radius: 5px;
   font-size: 13px;
-  font-family: "Roboto", sans-serif;
+  // font-family: "Roboto", sans-serif;
   font-weight: 500;
   transition: all 300ms linear 0s;
   text-decoration: none !important;
@@ -679,7 +679,7 @@ h6 {
       margin-right: 30px;
       a {
         font-size: 13px;
-        font-family: $rob;
+        // font-family: $rob;
         color: $pfont;
       }
       &:last-child {
@@ -773,7 +773,7 @@ h6 {
 // 			color: $dip;
 // 			h5{
 // 				font-size: 14px;
-// 				font-family: $rob;
+// font-family: $rob;
 // 				text-transform: uppercase;
 // 				letter-spacing: 2.1px;
 // 				margin-bottom: 20px;
@@ -789,7 +789,7 @@ h6 {
 // 			}
 // 			p{
 // 				color: $pfont;
-// 				font-family: $rob;
+// font-family: $rob;
 // 				max-width: 680px;
 // 				font-size: 14px;
 // 				line-height: 26px;
@@ -808,7 +808,7 @@ h6 {
 //                 display: inline-block;
 //                 border-radius: 5px;
 //                 font-size: 13px;
-//                 font-family: $rob;
+// font-family: $rob;
 //                 font-weight: 500;
 //                 @include transition;
 //                 &:hover{
@@ -853,7 +853,7 @@ h6 {
     h6 {
       font-size: 16px;
       line-height: 24px;
-      color: $rob;
+      // font-family: $rob;
       font-weight: bold;
       margin-bottom: 0px;
       color: $dip;
@@ -879,7 +879,7 @@ h6 {
       line-height: 26px;
       color: #999;
       border: 1px solid #eeeeee;
-      font-family: $rob;
+      // font-family: $rob;
       border-radius: 0px;
       padding-left: 20px;
       &:focus {
@@ -914,7 +914,7 @@ h6 {
   background-size: 200% auto;
   padding: 0px 50px;
   color: #fff;
-  font-family: "Roboto", sans-serif;
+  // font-family: "Roboto", sans-serif;
   font-size: 13px;
   font-weight: 500;
   line-height: 50px;
@@ -936,10 +936,19 @@ h6 {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .medium-widget-article__row {
-    display: block;
+    flex-wrap: wrap;
   }
+  .medium-widget-article__item {
+    flex: 0 0 100% !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  // .medium-widget-article__row {
+  //   display: block;
+  // }
   .carousel-inner {
     max-height: 180px;
   }
@@ -967,12 +976,12 @@ h6 {
   text-decoration: none !important;
 }
 
-.customStyle{
+.customStyle {
   display: flex !important;
   a {
     cursor: pointer;
     font-size: 16px;
-    font-family: 'Roboto', sans-serif;
+    // font-family: "Roboto", sans-serif;
   }
 }
 
@@ -987,7 +996,7 @@ h6 {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background: rgba(0, 0, 0, 0.70);
+  background: rgba(0, 0, 0, 0.7);
   // background-color: black;
 }
 
@@ -1103,8 +1112,8 @@ img.hover-shadow {
 }
 
 .crossStyle {
-    color: rgba(255, 255, 255, 0.7) !important;
-    opacity: inherit !important;
-    font-size: 40px !important;
-    // background-color: rgba(0, 0, 0, 0.8);
+  color: rgba(255, 255, 255, 0.7) !important;
+  opacity: inherit !important;
+  font-size: 40px !important;
+  // background-color: rgba(0, 0, 0, 0.8);
 }

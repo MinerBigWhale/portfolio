@@ -36,7 +36,7 @@ export default class HeaderComponent extends React.Component {
           onClick={this.breadCrumbLinks.bind(this)}
         >
           <div className="brand">
-            <Link to="/home">
+            <Link to="/">
               <img src={Logo} alt="" />
             </Link>
           </div>
@@ -48,7 +48,7 @@ export default class HeaderComponent extends React.Component {
             </div>
             <ul className="nav-list">
               <li>
-                <Link to="/home">{generalData.Pages.Home}</Link>
+                <Link to="/">{generalData.Pages.Home}</Link>
               </li>
               <li>
                 <Link to="/about">{generalData.Pages.About}</Link>

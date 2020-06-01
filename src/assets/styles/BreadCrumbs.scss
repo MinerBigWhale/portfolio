@@ -11,7 +11,7 @@
 // }
 $dip: #222222;
 $pfont: #777777;
-$rob: "Roboto", sans-serif;
+// $rob: "Roboto", sans-serif;
 $hee: "Heebo", sans-serif;
 $baseColor: #8490ff;
 @mixin transition(
@@ -77,7 +77,7 @@ a input[type="button"]:hover {
     a {
       font-size: 14px;
       color: #777777;
-      font-family: "Roboto", sans-serif;
+      // font-family: "Roboto", sans-serif;
       text-decoration: none !important;
     }
   }
@@ -115,7 +115,7 @@ a input[type="button"]:hover {
       color: $dip;
       h5 {
         font-size: 14px;
-        font-family: $rob;
+        // font-family: $rob;
         text-transform: uppercase;
         letter-spacing: 2.1px;
         margin-bottom: 20px;
@@ -131,7 +131,7 @@ a input[type="button"]:hover {
       }
       p {
         color: $pfont;
-        font-family: $rob;
+        // font-family: $rob;
         max-width: 680px;
         font-size: 14px;
         line-height: 26px;
@@ -155,7 +155,7 @@ a input[type="button"]:hover {
         display: inline-block;
         border-radius: 5px;
         font-size: 13px;
-        font-family: $rob;
+        // font-family: $rob;
         font-weight: 500;
         text-decoration: none;
         @include transition;

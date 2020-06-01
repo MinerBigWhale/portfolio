@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 import HeaderComponent from "./Layout/Components/Header";
 import { Footer } from "./Layout/Components/Footer";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
@@ -54,7 +53,7 @@ export class App extends React.Component {
     const links = [
       {
         name: "Home",
-        click: "/home",
+        click: "/",
       },
     ];
     switch (url) {

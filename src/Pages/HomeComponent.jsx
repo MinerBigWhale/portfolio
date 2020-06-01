@@ -13,7 +13,7 @@ import ProjectCardComponent from "../components/ProjectCardComponent";
 import { ProjectCategoryComponent } from "../components/ProjectCategoryComponent";
 
 export class HomeComponent extends React.Component {
-  projectsList = projectData.Projects.reverse();
+  projectsList = projectData.Projects.reverse().slice(0, 6);
   componentDidMount() {
     try {
       const widget = document.getElementById("medium-widget");
@@ -75,17 +75,15 @@ export class HomeComponent extends React.Component {
               </ul>
             </div>
             <div className="projects_inner row">
-              {this.projectsList.map((details, index) => {
-                return index < 6 ? (
-                  <ProjectCardComponent
-                    key={index}
-                    title={details.data.Title}
-                    cardDescription={details.data.CardDescription}
-                    category={details.data.Category}
-                    img={details.data.ImageURL}
-                  />
-                ) : null;
-              })}
+              {this.projectsList.map((details, index) => (
+                <ProjectCardComponent
+                  key={index}
+                  title={details.data.Title}
+                  cardDescription={details.data.CardDescription}
+                  category={details.data.Category}
+                  img={details.data.ImageURL}
+                />
+              ))}
             </div>
             <div className="row mt-4">
               <div className="col">

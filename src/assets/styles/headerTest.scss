@@ -34,51 +34,50 @@ $nav-background: #f9f9ff;
 
 nav {
   float: right;
-   ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-        li {
-           float: left;
-           position: relative;
-              a {
-                display: block;
-                padding: 0 20px;
-                line-height: $nav-height;
-                background: $nav-background;
-                color: $nav-font-color;
-                text-decoration: none;
-                text-transform: uppercase;
-                font-weight: bold;
-                font: 500 12px/70px 'Roboto', sans-serif;
-            
-                &:hover {
-                        // background: $link-hover-color;
-                        color: $nav-font-color;
-                      }
-                &:not(:only-child):after {
-                        padding-left: 4px;
-                        // content: ' ▾';
-                      }
-                } 
-       ul li {
-            min-width: 190px;
-              a {
-                padding: 15px;
-                line-height: 20px;
-              }
-            }
-     }
-   }
- }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      float: left;
+      position: relative;
+      a {
+        display: block;
+        padding: 0 20px;
+        line-height: $nav-height;
+        background: $nav-background;
+        color: $nav-font-color;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        font: 500 12px/70px;
 
- .nav-dropdown {
+        &:hover {
+          // background: $link-hover-color;
+          color: $nav-font-color;
+        }
+        &:not(:only-child):after {
+          padding-left: 4px;
+          // content: ' ▾';
+        }
+      }
+      ul li {
+        min-width: 190px;
+        a {
+          padding: 15px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}
+
+.nav-dropdown {
   position: absolute;
   z-index: 999;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
   display: none;
 }
-
 
 .nav-mobile {
   //display: none;
@@ -137,7 +136,7 @@ nav {
       background: $nav-font-color;
       position: absolute;
       display: block;
-      content: '';
+      content: "";
       transition: all 300ms ease-in-out;
     }
     span:before {

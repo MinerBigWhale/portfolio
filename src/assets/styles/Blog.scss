@@ -1,6 +1,6 @@
 $dip: #222222;
 $pfont: #777777;
-$rob: "Roboto", sans-serif;
+// $rob: "Roboto", sans-serif;
 $hee: "Heebo", sans-serif;
 $baseColor: #8490ff;
 @mixin transition(
@@ -318,7 +318,7 @@ $baseColor: #8490ff;
       a {
         color: $pfont;
         font-size: 12px;
-        font-family: $rob;
+        // font-family: $rob;
       }
     }
     h4 {
@@ -337,7 +337,7 @@ $baseColor: #8490ff;
     p {
       margin-bottom: 0px;
       font-size: 14px;
-      font-family: $rob;
+      // font-family: $rob;
     }
   }
 }
@@ -401,7 +401,7 @@ $baseColor: #8490ff;
     padding: 30px 35px 40px 30px;
     h4 {
       color: $dip;
-      font-family: $rob;
+      // font-family: $rob;
       font-size: 18px;
       font-weight: 600;
       margin-bottom: 15px;
@@ -427,7 +427,7 @@ $baseColor: #8490ff;
       line-height: 50px;
       background: $baseColor;
       color: #fff;
-      font-family: $rob;
+      // font-family: $rob;
       font-size: 14px;
       font-weight: 500;
       & + a {
@@ -568,7 +568,7 @@ $baseColor: #8490ff;
   .post_tag {
     padding-bottom: 20px;
     a {
-      font: 300 14px/21px $rob;
+      font: 300 14px/21px;
       color: $dip;
       &:hover {
         color: $pfont;
@@ -581,7 +581,7 @@ $baseColor: #8490ff;
   .blog_meta {
     li {
       a {
-        font: 300 14px/20px $rob;
+        font: 300 14px/20px;
         color: #777777;
         vertical-align: middle;
         padding-bottom: 12px;
