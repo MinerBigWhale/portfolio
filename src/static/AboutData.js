@@ -41,7 +41,7 @@ export default {
       CompanyName: "Hatchyard",
       Position: "Software Engineer Intern",
       StartDate: "2020 Apr",
-      EndDate: "Present",
+      EndDate: "2020 Jun",
       Description: "Intern-Software engineer @ Hatchyard (Private) LTD",
       Icon: "flaticon-skyline",
     },
