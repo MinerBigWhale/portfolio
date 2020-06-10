@@ -33,7 +33,7 @@ export const Footer = () => {
           <div className="col-lg-5">
             <aside className="f_widget social_widget">
               <div className="f_titlefooter">
-                <h3>FollowMe</h3>
+                <h3>Follow Me</h3>
                 <br />
                 <p>Let us be social</p>
               </div>
