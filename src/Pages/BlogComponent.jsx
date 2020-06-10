@@ -3,17 +3,10 @@ import "../assets/styles/Site.scss";
 import "../assets/styles/Blog.scss";
 import Slider from "../components/Slider";
 import blogData from "../static/BlogData";
+import TwitterAPI from "../components/TwitterAPI";
 
 export class BlogComponent extends React.Component {
-  componentDidMount() {
-    const script = document.createElement("script");
-
-    script.src = "https://platform.twitter.com/widgets.js";
-    script.charset = "utf-8";
-    script.async = true;
-
-    document.body.appendChild(script);
-  }
+  componentDidMount() {}
   render() {
     return (
       <section className="blog_area single-post-area p_120">
@@ -67,28 +60,7 @@ export class BlogComponent extends React.Component {
             </div>
             <div className="col-lg-4">
               <div className="blog_right_sidebar">
-                <aside className="single_sidebar_widget author_widget">
-                  <a
-                    className="twitter-timeline"
-                    href={blogData.TwitterBannerLink}
-                    data-tweet-limit="3"
-                  >
-                    Tweets by {blogData.TwitterUserName}
-                  </a>
-                </aside>
-                <aside className="single_sidebar_widget popular_post_widget">
-                  <div className="blogAside1">
-                    <a
-                      href={blogData.TwitterButtonLink}
-                      className="twitter-mention-button"
-                      data-size="large"
-                      data-dnt="true"
-                      data-show-count="false"
-                    >
-                      Tweet to @{blogData.TwitterUserName}
-                    </a>
-                  </div>
-                </aside>
+                <TwitterAPI />
                 <div className="br"></div>
                 <aside className="single_sidebar_widget author_widget">
                   <div className="googleCalendar">
