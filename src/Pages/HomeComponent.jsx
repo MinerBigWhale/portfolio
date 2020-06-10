@@ -13,7 +13,7 @@ import ProjectCardComponent from "../components/ProjectCardComponent";
 import { ProjectCategoryComponent } from "../components/ProjectCategoryComponent";
 
 export class HomeComponent extends React.Component {
-  projectsList = projectData.Projects.reverse().slice(0, 6);
+  projectsList = projectData.Projects.slice(0, 6);
   componentDidMount() {
     try {
       const widget = document.getElementById("medium-widget");

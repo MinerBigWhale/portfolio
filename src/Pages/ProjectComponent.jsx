@@ -3,7 +3,7 @@ import projectData from "../static/ProjectData";
 import ProjectCardComponent from "../components/ProjectCardComponent";
 import { ProjectCategoryComponent } from "../components/ProjectCategoryComponent";
 export class ProjectComponent extends React.Component {
-  fullProjectsList = projectData.Projects.reverse();
+  fullProjectsList = projectData.Projects;
 
   breadCrumbLinks() {
     this.props.onHeaderClick();
