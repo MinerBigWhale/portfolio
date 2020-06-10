@@ -62,7 +62,6 @@ export class BlogComponent extends React.Component {
             </div>
             <div className="col-lg-4">
               <div className="blog_right_sidebar">
-<<<<<<< HEAD
                 <aside className="single_sidebar_widget author_widget">
                   <a
                     className="twitter-timeline"
@@ -86,9 +85,6 @@ export class BlogComponent extends React.Component {
                   </div>
                 </aside>
 
-=======
-                <TwitterAPI />
->>>>>>> 63f890f4c1806a0a24aafe93c657d85cca60a470
                 <div className="br"></div>
                 <aside className="single_sidebar_widget author_widget">
                   <div className="googleCalendar">
