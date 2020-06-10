@@ -34,7 +34,6 @@ export class ProjectComponent extends React.Component {
   }
 
   render() {
-    console.log(projectData.Projects.reverse());
     return (
       <section className="projects_area p_120">
         <div className="container">
@@ -59,7 +58,7 @@ export class ProjectComponent extends React.Component {
             className="projects_inner row"
             onClick={this.breadCrumbLinks.bind(this)}
           >
-            {projectData.Projects.reverse().map((details, index) => {
+            {this.fullProjectsList.map((details, index) => {
               return (
                 <ProjectCardComponent
                   key={index}
