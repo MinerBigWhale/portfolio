@@ -5,7 +5,7 @@ import Report from "../../assets/Docs/Report.pdf";
 import projectDetails from "../../static/ProjectData";
 
 export const NPDComponent = () => {
-  const PageDatails = projectDetails.Projects.reverse()[1].data;
+  const PageDatails = projectDetails.Projects[1].data;
   const parts = PageDatails.Description.split("\n");
   return (
     <section className="portfolio_details_area p_120">

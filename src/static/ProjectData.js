@@ -1,4 +1,4 @@
-export default {
+let projectData = {
   projectPageDescription:
     "I am very interested in getting into hands-on work apart from my regular lectures and routine, so I have posted most of the projects that I do. You can get complete access to all these projects, including the code and related files. For further details, feel free to contact me via social media.",
   ProjectTypes: {
@@ -166,5 +166,10 @@ export default {
           "Face classification refers to classification of facial emotions. Emotional management is one of the highly expected skills in the industry. Humans are able to identify emotions of peers, but the machines are not capable of identifying the emotions by themselves. That’s why we need to train the machines using Machine learning.\n\nFortunately Microsoft Azure has Face API and Emotion API to classify the feelings. Microsoft trained with millions of images and created an API for users. Face API has a lot of other classifications like age, gender, etc. I used Face API and call the API using Android studio and developed the UI to take Images and send. I shared the above documents with the permission of my mentor.",
       },
     },
-  ].reverse(),
+  ],
 };
+let projects = projectData.Projects.slice().reverse();
+let ReverseProjectDetails = projects;
+projectData["ProjectsReverse"] = ReverseProjectDetails;
+
+export default projectData;

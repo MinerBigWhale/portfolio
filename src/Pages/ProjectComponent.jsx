@@ -3,13 +3,7 @@ import projectData from "../static/ProjectData";
 import ProjectCardComponent from "../components/ProjectCardComponent";
 import { ProjectCategoryComponent } from "../components/ProjectCategoryComponent";
 export class ProjectComponent extends React.Component {
-  fullProjectsList = projectData.Projects;
-
-  componentDidMount() {
-    if (this.fullProjectsList[0].ID === 1) {
-      window.location.reload();
-    }
-  }
+  fullProjectsList = projectData.ProjectsReverse;
 
   breadCrumbLinks() {
     this.props.onHeaderClick();
@@ -40,7 +34,6 @@ export class ProjectComponent extends React.Component {
   }
 
   render() {
-    console.log(this.fullProjectsList);
     return (
       <section className="projects_area p_120">
         <div className="container">

@@ -4,7 +4,7 @@ import SupplyChainManagement from "../../assets/Docs/SupplyChainManagement.pdf";
 import projectDetails from "../../static/ProjectData";
 
 export const SupplyChainMSComponent = () => {
-  const PageDatails = projectDetails.Projects.reverse()[3].data;
+  const PageDatails = projectDetails.Projects[3].data;
   const parts = PageDatails.Description.split("\n");
 
   return (

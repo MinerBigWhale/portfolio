@@ -4,7 +4,7 @@ import SpellMeFile from "../../assets/Docs/SpellMe.pptx";
 import projectDetails from "../../static/ProjectData";
 
 export const SpellMeComponent = () => {
-  const PageDatails = projectDetails.Projects.reverse()[6].data;
+  const PageDatails = projectDetails.Projects[6].data;
   const parts = PageDatails.Description.split("\n");
 
   return (

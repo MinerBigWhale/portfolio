@@ -2,7 +2,7 @@ import React from "react";
 import projectDetails from "../../static/ProjectData";
 
 export const ChatbotComponent = () => {
-  const PageDatails = projectDetails.Projects.reverse()[4].data;
+  const PageDatails = projectDetails.Projects[4].data;
   const parts = PageDatails.Description.split("\n");
 
   return (
