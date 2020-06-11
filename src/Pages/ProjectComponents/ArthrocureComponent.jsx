@@ -4,7 +4,7 @@ import ArthroCure from "../../assets/Docs/ArthroCure.pptx";
 import projectDetails from "../../static/ProjectData";
 
 export const ArthrocureComponent = () => {
-  const PageDatails = projectDetails.Projects[7].data;
+  const PageDatails = projectDetails.Projects.reverse()[7].data;
   const parts = PageDatails.Description.split("\n");
   return (
     <section className="portfolio_details_area p_120">

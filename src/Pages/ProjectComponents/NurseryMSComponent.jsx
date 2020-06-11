@@ -2,7 +2,7 @@ import React from "react";
 import projectDetails from "../../static/ProjectData";
 
 export const NurseryMSComponent = () => {
-  const PageDatails = projectDetails.Projects[2].data;
+  const PageDatails = projectDetails.Projects.reverse()[2].data;
   const parts = PageDatails.Description.split("\n");
   return (
     <section className="portfolio_details_area p_120">

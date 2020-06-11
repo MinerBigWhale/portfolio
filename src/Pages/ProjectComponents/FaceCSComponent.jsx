@@ -10,7 +10,7 @@ import Final_Report from "../../assets/Docs/Final_Report.pdf";
 import projectDetails from "../../static/ProjectData";
 
 export const FaceCSComponent = () => {
-  const PageDatails = projectDetails.Projects[8].data;
+  const PageDatails = projectDetails.Projects.reverse()[8].data;
   const parts = PageDatails.Description.split("\n");
 
   return (

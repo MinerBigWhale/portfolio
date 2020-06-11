@@ -4,7 +4,7 @@ import NWGSProjectDescription from "../../assets/Docs/NWGSProjectDescription.pdf
 import projectDetails from "../../static/ProjectData";
 
 export const NWGSComponent = () => {
-  const PageDatails = projectDetails.Projects[0].data;
+  const PageDatails = projectDetails.Projects.reverse()[0].data;
   const parts = PageDatails.Description.split("\n");
   return (
     <section className="portfolio_details_area p_120">

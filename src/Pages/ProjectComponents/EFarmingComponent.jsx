@@ -4,7 +4,7 @@ import EFarmingFile from "../../assets/Docs/EFarming.pptx";
 import projectDetails from "../../static/ProjectData";
 
 export const EFarmingComponent = () => {
-  const PageDatails = projectDetails.Projects[5].data;
+  const PageDatails = projectDetails.Projects.reverse()[5].data;
   const parts = PageDatails.Description.split("\n");
   return (
     <section className="portfolio_details_area p_120">
