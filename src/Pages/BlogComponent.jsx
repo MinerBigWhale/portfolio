@@ -3,12 +3,12 @@ import "../assets/styles/Site.scss";
 import "../assets/styles/Blog.scss";
 import Slider from "../components/Slider";
 import blogData from "../static/BlogData";
+import {
+  TwitterTimelineEmbed,
+  TwitterMentionButton,
+  TwitterFollowButton,
+} from "react-twitter-embed";
 export class BlogComponent extends React.Component {
-  componentDidMount() {
-    if (window.twttr.widgets) {
-      window.twttr.widgets.load();
-    }
-  }
   render() {
     return (
       <section className="blog_area single-post-area p_120">
@@ -63,25 +63,32 @@ export class BlogComponent extends React.Component {
             <div className="col-lg-4">
               <div className="blog_right_sidebar">
                 <aside className="single_sidebar_widget author_widget">
-                  <a
-                    className="twitter-timeline"
-                    href={blogData.TwitterBannerLink}
-                    data-tweet-limit="3"
-                  >
-                    Tweets by {blogData.TwitterUserName}
-                  </a>
+                  <TwitterTimelineEmbed
+                    sourceType="profile"
+                    screenName={blogData.TwitterUserName}
+                    options={{
+                      tweetLimit: "4",
+                      width: "100%",
+                      height: "100%",
+                    }}
+                    // noHeader="true"
+                    //   noBorders="true"
+                    noFooter={true}
+                  />
                 </aside>
+                <div className="br"></div>
+
                 <aside className="single_sidebar_widget popular_post_widget">
                   <div className="blogAside1">
-                    <a
-                      href={blogData.TwitterButtonLink}
-                      className="twitter-mention-button"
-                      data-size="large"
-                      data-dnt="true"
-                      data-show-count="false"
-                    >
-                      Tweet to @{blogData.TwitterUserName}
-                    </a>
+                    <TwitterMentionButton
+                      screenName={blogData.TwitterUserName}
+                      options={{ size: "large" }}
+                    />
+                    {/* <TwitterFollowButton
+                      screenName="TheSabesan"
+                      options={{ size: "large" }}
+                      noCounts
+                    /> */}
                   </div>
                 </aside>
 

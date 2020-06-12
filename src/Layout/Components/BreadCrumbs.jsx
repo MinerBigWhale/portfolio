@@ -77,7 +77,6 @@ export class BreadCrumbsComponent extends React.Component {
     this.setState({ crumbUpdate: links });
   }
   render() {
-    console.log(this.state.crumbUpdate);
     const pageName = (this.props.breadCLinks.length > 0
       ? String(this.props.breadCLinks[this.props.breadCLinks.length - 1].name)
       : ""
