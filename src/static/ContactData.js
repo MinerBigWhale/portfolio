@@ -2,7 +2,7 @@ export default {
   AddressInfo: {
     City: "Jaffna",
     Country: "Sri Lanka",
-    Address: "Kobi Illam, Pannagam South, Chulipuram",
+    Address: "Pannagam South, Chulipuram",
   },
   MobileInfo: {
     MobileNo: "+94 (71) 978 6867",
