@@ -3,6 +3,8 @@ export default {
     City: "Jaffna",
     Country: "Sri Lanka",
     Address: "Pannagam South, Chulipuram",
+    Lat: 9.758302,
+    Lng: 79.952163,
   },
   MobileInfo: {
     MobileNo: "+94 (71) 978 6867",

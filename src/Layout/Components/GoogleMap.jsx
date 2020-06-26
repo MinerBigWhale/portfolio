@@ -1,6 +1,7 @@
 import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
 import React from "react";
 import googleMapStyles from "./GoogleMapStyles";
+import contactData from "../../static/ContactData";
 export class MapContainer extends React.Component {
   render() {
     return (
@@ -16,9 +17,17 @@ export class MapContainer extends React.Component {
           google={this.props.google}
           zoom={15}
           styles={this.props.mapStyles}
-          initialCenter={{ lat: 9.761927, lng: 79.95244 }}
+          initialCenter={{
+            lat: contactData.AddressInfo.Lat,
+            lng: contactData.AddressInfo.Lng,
+          }}
         >
-          <Marker position={{ lat: 9.761927, lng: 79.95244 }} />
+          <Marker
+            position={{
+              lat: contactData.AddressInfo.Lat,
+              lng: contactData.AddressInfo.Lng,
+            }}
+          />
         </Map>
       </div>
     );
