@@ -8,7 +8,7 @@ export default {
   Education:
     "Currently I am studying in the Department of Computer Science and Engineering in the Univeristy of Moratuwa. I sat for the GCE Advanced Level Examination in the year 2015 in the physical science stream and scored 3 A passes for combined Mathematics, Chemistry and Physics. In the year 2012 I sat for the G.C.E Ordinary Level Examination and scored 8 A passes and a B pass for the subjects Mathematics, Science, Information Technology, Tamil Literature, Hinduism, History, Commerce and Accounting, Tamil and English(B). I studied my secondary education in J/Jaffna Hindu College, Sri Lanka and primary education in J/Jaffna Hindu Primary school, Sri Lanka.",
   Employment:
-    "I'm currently working in Sysco LABS (PVT) LTD as an Intern-Software Engineer, Towards Data Science as a Writer, and as a Game Developer for Dialog Gaming",
+    "I'm currently working in Towards Data Science as a Writer. I worked in Sysco LABS (PVT) LTD as an Intern-Software Engineer, Hatchyard as a Trainee Software Engineer, and as a Game Developer for Dialog Gaming",
   EmploymentDetails: [
     {
       CompanyName: "Towards Data Science",
@@ -39,10 +39,11 @@ export default {
     },
     {
       CompanyName: "Hatchyard",
-      Position: "Software Engineer Intern",
+      Position: "Trainee Software Engineer",
       StartDate: "2020 Apr",
       EndDate: "2020 Jun",
-      Description: "Intern-Software engineer @ Hatchyard (Private) LTD",
+      //TODO: Update Description
+      Description: "Trainee Software engineer @ Hatchyard (Private) LTD",
       Icon: "flaticon-skyline",
     },
   ],
