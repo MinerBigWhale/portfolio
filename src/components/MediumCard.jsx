@@ -44,7 +44,7 @@ export default function MediumCard(props) {
             rel="noopener noreferrer"
             className="text-fiord-blue"
           >
-            {ShortenText(props.title, 0, 50)}
+            {ShortenText(props.title, 0, 100)}
           </a>
         </h5>
         <p className="card-text d-inline-block mb-3">
