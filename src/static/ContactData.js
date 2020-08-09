@@ -79,7 +79,7 @@ export default {
     {
       SocialMediaName: "Facebook",
       ProfileLink: "https://www.facebook.com/sathananthan.sabesan",
-      fontAwesomeIconName: "fab fa-facebook",
+      fontAwesomeIconName: "fab fa-facebook-f",
       OnMouseOverColor: "#1778f2",
     },
     {
