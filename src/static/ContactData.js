@@ -40,6 +40,12 @@ export default {
       OnMouseOverColor: "#f48024",
     },
     {
+      SocialMediaName: "Dev",
+      ProfileLink: "https://dev.to/thesabesan",
+      fontAwesomeIconName: "fab fa-dev",
+      OnMouseOverColor: "#000000",
+    },
+    {
       SocialMediaName: "Gmail",
       ProfileLink: "mailto:sabesan996@gmail.com",
       fontAwesomeIconName: "far fa-envelope",
