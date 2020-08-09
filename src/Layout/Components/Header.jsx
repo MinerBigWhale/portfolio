@@ -55,46 +55,6 @@ export default class HeaderComponent extends React.Component {
               </li>
               <li>
                 <Link to="/projects">{generalData.Pages.Projects}</Link>
-                {/* <ul className="nav-dropdown">
-                  <li>
-                    <Link to="Project-Face Classification System">
-                      Face Classification System
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="Project-Arthrocure">Arthrocure</Link>
-                  </li>
-                  <li>
-                    <Link to="Project-Spell Me">Spell Me</Link>
-                  </li>
-                  <li>
-                    <Link to="Project-E-Farming">E-Farming</Link>
-                  </li>
-                  <li>
-                    <Link to="Project-Chatbot">Chatbot</Link>
-                  </li>
-                  <li>
-                    <Link to="Project-Supply Chain Management System">
-                      Supply Chain Management System
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="Project-Nursery Management System">
-                      Nursery Management System
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="Project-Nano Processor Design">
-                      Nano Processor Design
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="Project-Nozama Warrior Game Simulation">
-                      Nozama Warrior Game Simulation
-                    </Link>
-                  </li>
-                </ul>
-               */}
               </li>
               <li>
                 <Link to="/blog">{generalData.Pages.Blog}</Link>

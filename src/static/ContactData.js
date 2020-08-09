@@ -80,7 +80,13 @@ export default {
       SocialMediaName: "Facebook",
       ProfileLink: "https://www.facebook.com/sathananthan.sabesan",
       fontAwesomeIconName: "fab fa-facebook-f",
-      OnMouseOverColor: "#1877f2",
+      OnMouseOverColor: "#1778f2",
+    },
+    {
+      SocialMediaName: "FacebookMessenger",
+      ProfileLink: "https://www.messenger.com/t/sathananthan.sabesan",
+      fontAwesomeIconName: "fab fa-facebook-messenger",
+      OnMouseOverColor: "#0078FF",
     },
     {
       SocialMediaName: "Instagram",
