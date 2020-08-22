@@ -21,7 +21,7 @@ export default function MediumCard(props) {
   {
     props.source === "Medium"
       ? (articletype = "Medium")
-      : (articletype = "dev.to");
+      : (articletype = "Dev");
   }
 
   if (articletype === "Medium") {

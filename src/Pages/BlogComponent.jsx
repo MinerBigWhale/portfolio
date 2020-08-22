@@ -25,7 +25,7 @@ export class BlogComponent extends React.Component {
                       <p>
                         Here you can see only my last 10 blog articles in Medium
                         and dev.to. If you want more posts click the below
-                        button
+                        buttons.
                       </p>
                     </div>
                     <a
@@ -35,7 +35,8 @@ export class BlogComponent extends React.Component {
                       rel="noopener noreferrer"
                       role="button"
                     >
-                      View All Medium Posts <i className="fas fa-newspaper"></i>
+                      View All <i className="fab fa-medium"></i> Posts{" "}
+                      <i className="fas fa-newspaper"></i>
                     </a>
                     {"     "}
                     <a
@@ -45,7 +46,8 @@ export class BlogComponent extends React.Component {
                       rel="noopener noreferrer"
                       role="button"
                     >
-                      View All Dev Posts <i className="fas fa-newspaper"></i>
+                      View All <i className="fab fa-dev"></i> Posts{" "}
+                      <i className="fas fa-newspaper"></i>
                     </a>
                   </div>
                   <Slider />
