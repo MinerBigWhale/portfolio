@@ -18,14 +18,14 @@ export class BlogComponent extends React.Component {
               <div className="single-post row">
                 <div className="col-lg-12">
                   <div className="jumbotron text-center">
-                    <div id="logo"></div>
-                    <h1 className="display-4 mb-3 name name-small name-small-small">
-                      {blogData.MediumUserName}'s Posts
-                    </h1>
                     <div className="main_title">
+                      <h2 className="display-4 mb-3 name name-small name-small-small">
+                        Blog Posts
+                      </h2>
                       <p>
-                        Here you can see only my last 10 blog articles. If you
-                        want more posts click the below button
+                        Here you can see only my last 10 blog articles in Medium
+                        and dev.to. If you want more posts click the below
+                        button
                       </p>
                     </div>
                     <a
@@ -35,7 +35,17 @@ export class BlogComponent extends React.Component {
                       rel="noopener noreferrer"
                       role="button"
                     >
-                      View All Posts <i className="fas fa-newspaper"></i>
+                      View All Medium Posts <i className="fas fa-newspaper"></i>
+                    </a>
+                    {"     "}
+                    <a
+                      className="banner_btn"
+                      href={`https://dev.to/${blogData.DevToUserName}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      role="button"
+                    >
+                      View All Dev Posts <i className="fas fa-newspaper"></i>
                     </a>
                   </div>
                   <Slider />
@@ -44,19 +54,6 @@ export class BlogComponent extends React.Component {
                     id="pagin"
                     className="pagination justify-content-center"
                   ></ul>
-
-                  <div className="text-center">
-                    <div className="mb-5">
-                      <a
-                        className="banner_btn"
-                        href={`https://medium.com/${blogData.MediumUserName}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        View All Posts <i className="fas fa-newspaper"></i>
-                      </a>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -67,7 +64,7 @@ export class BlogComponent extends React.Component {
                     sourceType="profile"
                     screenName={blogData.TwitterUserName}
                     options={{
-                      tweetLimit: "4",
+                      tweetLimit: "3",
                       width: "100%",
                       height: "100%",
                     }}
