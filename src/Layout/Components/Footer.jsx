@@ -24,8 +24,8 @@ export const Footer = () => {
                 ))}
                 <br />
                 <p>
-                  Copyright &copy;
-                  {new Date().getFullYear()} {generalData.FullName}
+                  Copyright &copy; 2019 - {new Date().getFullYear()}{" "}
+                  {generalData.FullName}
                 </p>
               </div>
             </aside>
