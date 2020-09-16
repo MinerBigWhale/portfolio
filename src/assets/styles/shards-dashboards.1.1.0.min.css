@@ -4883,6 +4883,7 @@ i.material-icons {
 a.text-fiord-blue:focus,
 a.text-fiord-blue:hover {
   color: #2b394f !important;
+  text-decoration: none !important;
 }
 .text-shuttle-gray {
   color: #5a6169 !important;
