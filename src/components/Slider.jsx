@@ -24,11 +24,11 @@ class Slider extends React.Component {
   mediumURL = `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/${blogData.MediumUserName}`;
   blogURL = `https://api.rss2json.com/v1/api.json?rss_url=https://dev.to/feed/${blogData.DevToUserName}`;
 
-  componentDidMount() {
+  async componentDidMount() {
     let postList = [];
     let sortPostlist;
     const itemRows = [];
-    fetch(this.mediumURL)
+    await fetch(this.mediumURL)
       .then((res) => res.json())
       .then((data) => {
         // create two-dimensional array with 2 elements per inner array
@@ -51,7 +51,7 @@ class Slider extends React.Component {
         this.setState({ mediumPostList: postRows });
       });
 
-    fetch(this.blogURL)
+    await fetch(this.blogURL)
       .then((res) => res.json())
       .then((data) => {
         // create two-dimensional array with 2 elements per inner array
