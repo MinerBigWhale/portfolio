@@ -1,10 +1,9 @@
 import React from "react";
-import { Col, Row } from "shards-react";
-import BlogCard from "./BlogCard";
-import "../assets/styles/shards-dashboards.1.1.0.min.css";
+import PostCard from "./PostCard";
 import blogData from "../static/BlogData";
 import "../assets/styles/Site.scss";
-
+import axios from "axios";
+import { Grid } from "@material-ui/core";
 // wrapper for items
 
 class Slider extends React.Component {
@@ -28,8 +27,9 @@ class Slider extends React.Component {
     let postList = [];
     let sortPostlist;
     const itemRows = [];
-    await fetch(this.mediumURL)
-      .then((res) => res.json())
+    await axios
+      .get(this.mediumURL)
+      .then(async (res) => await res.data)
       .then((data) => {
         // create two-dimensional array with 2 elements per inner array
         const avatar = data.feed.image;
@@ -51,8 +51,9 @@ class Slider extends React.Component {
         this.setState({ mediumPostList: postRows });
       });
 
-    await fetch(this.blogURL)
-      .then((res) => res.json())
+    await axios
+      .get(this.blogURL)
+      .then(async (res) => await res.data)
       .then((data) => {
         // create two-dimensional array with 2 elements per inner array
         const profileLink = data.feed.link;
@@ -119,21 +120,20 @@ class Slider extends React.Component {
     this.setState({ showRows: rows });
   }
   render() {
+    const { showRows, counterList } = this.state;
     return (
       <div className="blog__slider">
-        {this.state.showRows.map((row, i) => (
-          <Row key={i}>
+        {showRows.map((row, i) => (
+          <Grid container spacing={1} key={i}>
             {row.map((item, j) => (
-              <Col key={j} lg="6" md="6" sm="12" className="mb-4">
-                <BlogCard {...item} />
-              </Col>
+              <PostCard {...item} key={j} />
             ))}
-          </Row>
+          </Grid>
         ))}
         {
           <ul className="justify-content-center pagination customStyle">
-            {this.state.counterList.length > 0
-              ? this.state.counterList.map((val, i) => (
+            {counterList.length > 0
+              ? counterList.map((val, i) => (
                   <li className="page-item" key={i} id={`${i}li`}>
                     <a
                       className="page-link"

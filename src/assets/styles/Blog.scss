@@ -572,6 +572,7 @@ $baseColor: #8490ff;
       color: $dip;
       &:hover {
         color: $pfont;
+        text-decoration: none !important;
       }
       &.active {
         color: $baseColor;
