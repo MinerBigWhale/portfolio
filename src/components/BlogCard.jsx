@@ -5,17 +5,30 @@ import ToText from "../utils/ToText";
 
 // functional card component to display single item
 export default function MediumCard(props) {
-  const shortMonthName = new Intl.DateTimeFormat("en-US", {
-    month: "short",
-  }).format;
-  let date = new Date(props.pubDate);
-  const publishDate =
-    shortMonthName(date) +
+  const monthShortname = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  const splitDate = props.pubDate.split(" ");
+  const date = splitDate[0];
+  const splitMonth = date.split("-");
+  const finalDate =
+    monthShortname[Number(splitMonth[1] - 1)] +
     " " +
-    date.getDate() +
+    splitMonth[2] +
     "," +
     " " +
-    date.getFullYear();
+    splitMonth[0];
 
   let articletype = "";
   {
@@ -86,7 +99,7 @@ export default function MediumCard(props) {
               className="fas fa-calendar-alt"
               style={{ marginRight: "0.5em" }}
             ></i>
-            {publishDate}
+            {finalDate}
           </span>
         </CardFooter>
       </Card>
@@ -141,7 +154,7 @@ export default function MediumCard(props) {
               className="fas fa-calendar-alt"
               style={{ marginRight: "0.5em" }}
             ></i>{" "}
-            {publishDate}
+            {finalDate}
           </span>
         </CardFooter>
       </Card>
