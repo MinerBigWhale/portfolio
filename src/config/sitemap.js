@@ -22,6 +22,7 @@ const sitemap = sm.createSitemap({
     { url: "/contact", changefreq: "monthly", priority: 0.7 },
   ],
 });
+console.log(sitemap);
 
 fs.writeFileSync(OUTPUT_FILE, sitemap.toString());
 
