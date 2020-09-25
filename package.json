@@ -1,7 +1,7 @@
 {
   "name": "sabesansathananthan",
   "version": "2.5.8",
-  "homepage": "https://sabesansathananthan.github.io/",
+  "homepage": "https://sabesansathananthan.now.sh/",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.0",
@@ -26,7 +26,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build --branch master",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "dev": "watch build start src"
@@ -45,8 +44,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^2.2.0"
   }
 }
