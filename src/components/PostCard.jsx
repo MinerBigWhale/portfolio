@@ -71,8 +71,8 @@ const styles = makeStyles((muiBaseTheme) => ({
     lineHeight: 1.8,
   },
   avatar: {
-    width: "3rem",
-    height: "3rem",
+    width: "4rem",
+    height: "4rem",
     borderRadius: "50%",
     bottom: -136,
     boxShadow: " 0 0 0 0.125rem #fff, 0 0.1875rem 0.4375rem rgba(90,97,105,.5)",
