@@ -74,7 +74,7 @@ const styles = makeStyles((muiBaseTheme) => ({
     width: "4rem",
     height: "4rem",
     borderRadius: "50%",
-    bottom: -136,
+    bottom: -130,
     boxShadow: " 0 0 0 0.125rem #fff, 0 0.1875rem 0.4375rem rgba(90,97,105,.5)",
     "&:not(:first-of-type)": {
       marginLeft: -muiBaseTheme.spacing(),
@@ -88,7 +88,7 @@ const StyledBadge = withStyles((theme) => ({
     backgroundColor: "#44b700",
     color: "#44b700",
     boxShadow: `0 0 0 2px ${theme.palette.background.paper}`,
-    bottom: -131,
+    bottom: -125,
 
     "&::after": {
       position: "absolute",
