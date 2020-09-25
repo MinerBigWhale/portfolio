@@ -1,7 +1,7 @@
 {
   "name": "sabesansathananthan",
   "version": "2.5.8",
-  "homepage": "https://sabesansathananthan.now.sh/",
+  "homepage": "https://sabesansathananthan.github.io/",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.0",
