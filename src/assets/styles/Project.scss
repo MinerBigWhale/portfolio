@@ -1,0 +1,152 @@
+/*================= Projects ==============*/
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 16px !important;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+a input[type="button"]:hover {
+  text-decoration: none !important;
+}
+
+li {
+  a {
+    text-decoration: none !important;
+  }
+}
+$dip: #222222;
+$pfont: #777777;
+// $rob: "Roboto", sans-serif;
+$baseColor: #8490ff;
+// Mixins
+@mixin transition(
+  $property: all,
+  $duration: 300ms,
+  $animate: linear,
+  $delay: 0s
+) {
+  transition: $property $duration $animate $delay;
+}
+.portfolio_details_area {
+}
+.portfolio_details_inner {
+  .row {
+    margin-bottom: 65px;
+  }
+  p {
+    margin-bottom: 30px;
+    font-size: 14px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+  .portfolio_right_text {
+    padding-left: 98px;
+    h4 {
+      color: $dip;
+      font-size: 21px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      font-weight: bold;
+    }
+    p {
+      margin-bottom: 25px;
+      font-size: 14px;
+    }
+    .list {
+      li {
+        margin-bottom: 7px;
+        span {
+          font-size: 14px;
+          color: $dip;
+          width: 97px;
+          display: inline-block;
+          font-weight: 600;
+        }
+        color: $pfont;
+        font-weight: normal;
+        font-size: 14px;
+        &:last-child {
+          margin-bottom: 0px;
+        }
+        i {
+          color: #f1cd09;
+        }
+      }
+    }
+  }
+}
+.list {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.social_widget {
+  p {
+    font-size: 20px;
+    line-height: 24px;
+    // font-family: $rob;
+    color: $pfont;
+    margin-bottom: 10px;
+  }
+  .list {
+    li {
+      margin-right: 17px;
+      display: inline-block;
+      a {
+        color: #cccccc;
+        font-size: 14px;
+        @include transition;
+      }
+      &:last-child {
+        margin-right: 0px;
+      }
+      &:hover {
+        a {
+          color: $baseColor;
+        }
+      }
+    }
+  }
+}
+
+.alignText {
+  text-align: justify;
+}
+
+.customSize {
+  font-size: 62px;
+}
+
+.sizeNcolor {
+  font-size: 62px;
+  color: black;
+}
+
+.customWidth {
+  width: 26rem;
+  margin-top: 5rem;
+}
+
+.customImgWidth {
+  width: 3.5rem;
+}
