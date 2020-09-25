@@ -63,7 +63,7 @@ const styles = makeStyles((muiBaseTheme) => ({
     color: "#3d5170",
     "&::hover": {
       color: "#2b394f",
-      textDecoration: "none !important",
+      textDecoration: "none ",
     },
   },
   subheading: {
@@ -202,16 +202,17 @@ export default function MediumCard(props) {
               paddingBottom: "0",
             }}
           >
-            <Link
-              href={props.link}
-              className={classes.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              variant={"h5"}
-              gutterBottom
-            >
-              {ShortenText(props.title, 0, 75)}
-            </Link>
+            <Typography className={classes.heading} variant={"h5"} gutterBottom>
+              <a
+                href={props.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none" }}
+                className={classes.link}
+              >
+                {ShortenText(props.title, 0, 75)}
+              </a>
+            </Typography>
 
             <Typography className={classes.subheading} variant="body1">
               {ShortenText(ToText(props.content), 0, 120) + "..."}
@@ -257,16 +258,17 @@ export default function MediumCard(props) {
               paddingBottom: "0",
             }}
           >
-            <Link
-              href={props.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={classes.link}
-              variant="h5"
-              gutterBottom
-            >
-              {ShortenText(props.title, 0, 75)}
-            </Link>
+            <Typography className={classes.heading} variant={"h5"} gutterBottom>
+              <a
+                href={props.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none" }}
+                className={classes.link}
+              >
+                {ShortenText(props.title, 0, 75)}
+              </a>
+            </Typography>
 
             <Typography className={classes.subheading} variant="body1">
               {ShortenText(ToText(props.content), 0, 120) + "..."}

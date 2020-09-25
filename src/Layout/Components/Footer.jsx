@@ -3,10 +3,11 @@ import "../../assets/styles/Footer.scss";
 import footerData from "../../static/FooterData";
 import generalData from "../../static/GeneralData";
 import "../../assets/styles/Site.scss";
+import packageJson from "../../../package.json";
 
 export const Footer = () => {
   let parts = footerData.FooterLine.split("\n");
-
+  console.log(packageJson.version);
   return (
     <footer className="footer_area p_footer">
       <div className="container">
@@ -25,7 +26,7 @@ export const Footer = () => {
                 <br />
                 <p>
                   Copyright &copy; 2019 - {new Date().getFullYear()}{" "}
-                  {generalData.FullName}
+                  {generalData.FullName} v{packageJson.version}
                 </p>
               </div>
             </aside>
