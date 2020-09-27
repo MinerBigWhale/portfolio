@@ -68,9 +68,15 @@ export class HomeComponent extends React.Component {
               <p>{homeData.RecentProjectIntro}</p>
             </div>
             <div className="projects_fillter">
-              <ul className="filter list" onClick={this.addFilter.bind(this)}>
+              <ul className="filter list">
                 {Object.values(projectData.ProjectTypes).map((val, key) => {
-                  return <ProjectCategoryComponent key={key} val={val} />;
+                  return (
+                    <ProjectCategoryComponent
+                      key={key}
+                      val={val}
+                      onClick={this.addFilter.bind(this)}
+                    />
+                  );
                 })}
               </ul>
             </div>

@@ -42,13 +42,14 @@ export class ProjectComponent extends React.Component {
             <p>{projectData.projectPageDescription}</p>
 
             <div className="projects_fillter">
-              <ul className="filter list" onClick={this.addFilter.bind(this)}>
+              <ul className="filter list">
                 {Object.values(projectData.ProjectTypes).map((val, key) => {
                   return (
                     <ProjectCategoryComponent
                       key={key}
                       val={val}
-                    ></ProjectCategoryComponent>
+                      onClick={this.addFilter.bind(this)}
+                    />
                   );
                 })}
               </ul>
