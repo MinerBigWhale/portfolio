@@ -95,14 +95,100 @@ export class App extends React.Component {
         });
         break;
       }
-      default: {
+      case "Project-Face%20Classification%20System": {
         links.push({
           name: "Project",
           click: "/projects",
+        });links.push({
+          name: "Face Classification System",
+          click: "/Project-Face Classification System",
         });
+        break;
+      }
+      case "Project-Arthrocure": {
         links.push({
-          name: url.replace("Project-", ""),
-          click: url,
+          name: "Project",
+          click: "/projects",
+        });links.push({
+          name: "Arthrocure",
+          click: "/Project-Arthrocure",
+        });
+        break;
+      }
+      case "Project-Spell%20Me": {
+        links.push({
+          name: "Project",
+          click: "/projects",
+        });links.push({
+          name: "Spell Me",
+          click: "/Project-Spell Me",
+        });
+        break;
+      }
+      case "Project-E-Farming": {
+        links.push({
+          name: "Project",
+          click: "/projects",
+        });links.push({
+          name: "E-Farming",
+          click: "/Project-E-Farming",
+        });
+        break;
+      }
+      case "Project-Chatbot": {
+        links.push({
+          name: "Project",
+          click: "/projects",
+        });links.push({
+          name: "Chatbot",
+          click: "/Project-Chatbot",
+        });
+        break;
+      }
+      case "Project-Supply%20Chain%20Management%20System": {
+        links.push({
+          name: "Project",
+          click: "/projects",
+        });links.push({
+          name: "Supply Chain Management System",
+          click: "/Project-Supply Chain Management System",
+        });
+        break;
+      }
+      case "Project-Nursery%20Management%20System": {
+        links.push({
+          name: "Project",
+          click: "/projects",
+        });links.push({
+          name: "Nursery Management System",
+          click: "/Project-Nursery Management System",
+        });
+        break;
+      }
+      case "Project-Nano%20Processor%20Design": {
+        links.push({
+          name: "Project",
+          click: "/projects",
+        });links.push({
+          name: "Nano Processor Design",
+          click: "/Project-Nano Processor Design",
+        });
+        break;
+      }
+      case "Project-Nozama%20Warrior%20Game%20Simulation": {
+        links.push({
+          name: "Project",
+          click: "/projects",
+        });links.push({
+          name: "Nozama Warrior Game Simulation",
+          click: "/Project-Nozama Warrior Game Simulation",
+        });
+        break;
+      }
+      default: {
+        links.push({
+          name: "Page not found",
+          click: "404",
         });
         break;
       }
@@ -166,6 +252,12 @@ export class App extends React.Component {
             render={(props) => (
               <HomeComponent onHeaderClick={this.breadCrumbsLink.bind(this)} />
             )}
+          ></Route>
+          
+          <Route component={AboutComponent} 
+           render={(props) => (
+            <AboutComponent onHeaderClick={this.breadCrumbsLink.bind(this)} />
+           )}
           ></Route>
         </Switch>
         <Footer />
