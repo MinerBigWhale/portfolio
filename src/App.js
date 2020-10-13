@@ -17,6 +17,7 @@ import { NurseryMSComponent } from "./Pages/ProjectComponents/NurseryMSComponent
 import { SpellMeComponent } from "./Pages/ProjectComponents/SpellMeComponent";
 import { SupplyChainMSComponent } from "./Pages/ProjectComponents/SupplyChainMSComponent";
 import { MediaComponent } from "./Pages/MediaComponent";
+import { NotFoundComponent } from "./Pages/NotFoundComponent";
 import { ProjectComponent } from "./Pages/ProjectComponent";
 
 export class App extends React.Component {
@@ -254,11 +255,7 @@ export class App extends React.Component {
             )}
           ></Route>
           
-          <Route component={AboutComponent} 
-           render={(props) => (
-            <AboutComponent onHeaderClick={this.breadCrumbsLink.bind(this)} />
-           )}
-          ></Route>
+          <Route component={NotFoundComponent}></Route>
         </Switch>
         <Footer />
       </BrowserRouter>

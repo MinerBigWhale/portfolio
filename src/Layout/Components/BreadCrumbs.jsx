@@ -2,7 +2,6 @@ import React from "react";
 import "../../assets/styles/BreadCrumbs.scss";
 import { Link } from "react-router-dom";
 import myImage from "../../assets/images/Banner/home-left-1.png";
-import thiefImage from "../../assets/images/Banner/404-thief.png";
 import generalData from "../../static/GeneralData";
 import homeData from "../../static/HomeData";
 
@@ -25,37 +24,7 @@ export class BreadCrumbsComponent extends React.Component {
 
     return crumbs.length > 1 ? (
       crumbs[1].click == "404" ? (
-        <div className="top-container" onClick={this.props.checkURL}>
-        <nav className="breadcrumbs" aria-label="breadcrumb">
-          <ol className="breadcrumb">
-            <section className="home_banner_area">
-              <div className="banner_inner">
-                <div className="container">
-                  <div className="row">
-                    <div className="col-lg-6">
-                      <div className="home_left_img">
-                        <img src={thiefImage} alt="" />
-                      </div>
-                    </div>
-                    <div className="col-lg-6">
-                      <div className="banner_content">
-                        <h5>404 Page not found</h5>
-                        <h2>Looks like someone stole this page</h2>
-                        <h4>Please come back while we try to catch the thief</h4>
-                        
-                        <p>You may also be interested in other content or find out more about me.</p>
-                        <Link className="fonsS1 banner_btn" to="/about">
-                          Discover Now <i className="fas fa-search"></i>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </ol>
-        </nav>
-      </div>
+        ""
       ) : (
         <div
           className="top-container"
