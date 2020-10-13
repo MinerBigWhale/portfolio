@@ -24,6 +24,9 @@ export class NotFoundComponent extends React.Component {
                         <h2>Looks like someone stole this page</h2>
                         <p>Please come back while we try to catch the thief</p>
                         
+                        <Link className="fonsS1 banner_btn" onClick={() => { window.history.back() }}>
+                          Go Back
+                        </Link>
                       </div>
                     </div>
                   </div>
