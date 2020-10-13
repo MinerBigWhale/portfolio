@@ -50,7 +50,8 @@ export class App extends React.Component {
   breadCrumbsLink() {
     const windowURL = window.location.href;
     const urlArr = windowURL.split("/");
-    const url = !!urlArr && urlArr.length > 0 ? urlArr.pop() : "";
+    const url = !!urlArr && urlArr.length > 0 ? urlArr.slice(3).join('/') : ""; 
+    console.log(url,urlArr);
     const links = [
       {
         name: "Home",
@@ -205,12 +206,12 @@ export class App extends React.Component {
           checkURL={this.breadCrumbsLink.bind(this)}
         />
         <Switch>
-          <Route path="/about" component={AboutComponent}></Route>
-          <Route path="/blog" component={BlogComponent}></Route>
-          <Route path="/contact" component={ContactComponent}></Route>
-          <Route path="/media" component={MediaComponent}></Route>
+          <Route exact path="/about" component={AboutComponent}></Route>
+          <Route exact path="/blog" component={BlogComponent}></Route>
+          <Route exact path="/contact" component={ContactComponent}></Route>
+          <Route exact path="/media" component={MediaComponent}></Route>
           <Route
-            path="/projects"
+            exact path="/projects"
             render={(props) => (
               <ProjectComponent
                 onHeaderClick={this.breadCrumbsLink.bind(this)}
@@ -219,37 +220,43 @@ export class App extends React.Component {
             )}
           ></Route>
           <Route
-            path="/Project-Face Classification System"
+            exact path="/Project-Face Classification System"
             component={FaceCSComponent}
           ></Route>
           <Route
-            path="/Project-Arthrocure"
+            exact path="/Project-Arthrocure"
             component={ArthrocureComponent}
           ></Route>
-          <Route path="/Project-Spell Me" component={SpellMeComponent}></Route>
+          <Route 
+            exact path="/Project-Spell Me" 
+            component={SpellMeComponent}
+          ></Route>
           <Route
-            path="/Project-E-Farming"
+            exact path="/Project-E-Farming"
             component={EFarmingComponent}
           ></Route>
-          <Route path="/Project-Chatbot" component={ChatbotComponent}></Route>
+          <Route 
+            exact path="/Project-Chatbot" 
+            component={ChatbotComponent}
+          ></Route>
           <Route
-            path="/Project-Supply Chain Management System"
+            exact path="/Project-Supply Chain Management System"
             component={SupplyChainMSComponent}
           ></Route>
           <Route
-            path="/Project-Nursery Management System"
+            exact path="/Project-Nursery Management System"
             component={NurseryMSComponent}
           ></Route>
           <Route
-            path="/Project-Nano Processor Design"
+            exact path="/Project-Nano Processor Design"
             component={NPDComponent}
           ></Route>
           <Route
-            path="/Project-Nozama Warrior Game Simulation"
+            exact path="/Project-Nozama Warrior Game Simulation"
             component={NWGSComponent}
           ></Route>
           <Route
-            path="/"
+            exact path="/"
             render={(props) => (
               <HomeComponent onHeaderClick={this.breadCrumbsLink.bind(this)} />
             )}
