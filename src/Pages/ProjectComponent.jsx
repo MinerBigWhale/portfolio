@@ -5,9 +5,6 @@ import { ProjectCategoryComponent } from "../components/ProjectCategoryComponent
 export class ProjectComponent extends React.Component {
   fullProjectsList = projectData.ProjectsReverse;
 
-  breadCrumbLinks() {
-    this.props.onHeaderClick();
-  }
   addFilter(event) {
     const classN = event.target.id;
     const projTypes = Object.values(projectData.ProjectTypes);
@@ -57,7 +54,6 @@ export class ProjectComponent extends React.Component {
           </div>
           <div
             className="projects_inner row"
-            onClick={this.breadCrumbLinks.bind(this)}
           >
             {this.fullProjectsList.map((details, index) => {
               return (

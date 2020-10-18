@@ -1,7 +1,8 @@
 import React from "react";
 import HeaderComponent from "./Layout/Components/Header";
 import { Footer } from "./Layout/Components/Footer";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import AppContainer from "./Layout/Components/AppContainer";
 import { HomeComponent } from "./Pages/HomeComponent";
 import { AboutComponent } from "./Pages/AboutComponent";
 import { BreadCrumbsComponent } from "./Layout/Components/BreadCrumbs";
@@ -27,26 +28,7 @@ export class App extends React.Component {
       breadCLinks: [],
     };
   }
-  componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll.bind(this));
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll.bind(this));
-  }
-
-  handleScroll(event) {
-    let header = document.getElementById("myHeader");
-    if (!!header) {
-      let sticky = !!header ? header.offsetTop : 0;
-      if (window.pageYOffset > sticky) {
-        header.classList.add("sticky");
-      } else {
-        header.classList.remove("sticky");
-      }
-    }
-  }
-
+    
   breadCrumbsLink() {
     const windowURL = window.location.href;
     const urlArr = windowURL.split("/");
@@ -197,74 +179,92 @@ export class App extends React.Component {
     }
     this.setState({ breadCLinks: links });
   }
+    
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll.bind(this));
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll.bind(this));
+  }
+
+  handleScroll(event) {
+    let header = document.getElementById("myHeader");
+    if (!!header) {
+      let sticky = !!header ? header.offsetTop : 0;
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+  }
+
   render() {
     return (
       <BrowserRouter>
-        <HeaderComponent onHeaderClick={this.breadCrumbsLink.bind(this)} />
-        <BreadCrumbsComponent
-          breadCLinks={this.state.breadCLinks}
-          checkURL={this.breadCrumbsLink.bind(this)}
-        />
-        <Switch>
-          <Route exact path="/about" component={AboutComponent}></Route>
-          <Route exact path="/blog" component={BlogComponent}></Route>
           <Route exact path="/contact" component={ContactComponent}></Route>
           <Route exact path="/media" component={MediaComponent}></Route>
-          <Route
-            exact path="/projects"
-            render={(props) => (
-              <ProjectComponent
-                onHeaderClick={this.breadCrumbsLink.bind(this)}
-                {...props}
-              />
-            )}
-          ></Route>
-          <Route
-            exact path="/Project-Face Classification System"
-            component={FaceCSComponent}
-          ></Route>
-          <Route
-            exact path="/Project-Arthrocure"
-            component={ArthrocureComponent}
-          ></Route>
-          <Route 
-            exact path="/Project-Spell Me" 
-            component={SpellMeComponent}
-          ></Route>
-          <Route
-            exact path="/Project-E-Farming"
-            component={EFarmingComponent}
-          ></Route>
-          <Route 
-            exact path="/Project-Chatbot" 
-            component={ChatbotComponent}
-          ></Route>
-          <Route
-            exact path="/Project-Supply Chain Management System"
-            component={SupplyChainMSComponent}
-          ></Route>
-          <Route
-            exact path="/Project-Nursery Management System"
-            component={NurseryMSComponent}
-          ></Route>
-          <Route
-            exact path="/Project-Nano Processor Design"
-            component={NPDComponent}
-          ></Route>
-          <Route
-            exact path="/Project-Nozama Warrior Game Simulation"
-            component={NWGSComponent}
-          ></Route>
-          <Route
-            exact path="/"
-            render={(props) => (
-              <HomeComponent onHeaderClick={this.breadCrumbsLink.bind(this)} />
-            )}
-          ></Route>
-          
-          <Route component={NotFoundComponent}></Route>
-        </Switch>
-        <Footer />
+        <AppContainer 
+            breadCrumbsLink={this.breadCrumbsLink.bind(this)}>
+          <HeaderComponent />
+          <BreadCrumbsComponent
+            breadCLinks={this.state.breadCLinks}
+          />
+          <Switch>
+            <Route exact path="/about" component={AboutComponent}></Route>
+            <Route exact path="/blog" component={BlogComponent}></Route>
+            <Route exact path="/contact" component={ContactComponent}></Route>
+            <Route exact path="/media" component={MediaComponent}></Route>
+            <Route
+              exact path="/projects"
+              component={ProjectComponent}
+            ></Route>
+            <Route
+              exact path="/Project-Face Classification System"
+              component={FaceCSComponent}
+            ></Route>
+            <Route
+              exact path="/Project-Arthrocure"
+              component={ArthrocureComponent}
+            ></Route>
+            <Route
+              exact path="/Project-Spell Me"
+              component={SpellMeComponent}
+            ></Route>
+            <Route
+              exact path="/Project-E-Farming"
+              component={EFarmingComponent}
+            ></Route>
+            <Route
+              exact path="/Project-Chatbot"
+              component={ChatbotComponent}
+            ></Route>
+            <Route
+              exact path="/Project-Supply Chain Management System"
+              component={SupplyChainMSComponent}
+            ></Route>
+            <Route
+              exact path="/Project-Nursery Management System"
+              component={NurseryMSComponent}
+            ></Route>
+            <Route
+              exact path="/Project-Nano Processor Design"
+              component={NPDComponent}
+            ></Route>
+            <Route
+              exact path="/Project-Nozama Warrior Game Simulation"
+              component={NWGSComponent}
+            ></Route>
+            <Route
+              exact path="/"
+              component={HomeComponent}
+            ></Route>
+
+            <Route component={NotFoundComponent}></Route>
+          </Switch>
+          <Footer />
+        </AppContainer>
       </BrowserRouter>
     );
   }

@@ -4,15 +4,13 @@ import { Link } from "react-router-dom";
 import myImage from "../../assets/images/Banner/home-left-1.png";
 import generalData from "../../static/GeneralData";
 import homeData from "../../static/HomeData";
+import { withRouter } from 'react-router-dom';
 
 export class BreadCrumbsComponent extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      crumbUpdate: [],
-    };
   }
-  //TODO: Fix the problem
+  
   render() {
     const pageName = (this.props.breadCLinks.length > 0
       ? String(this.props.breadCLinks[this.props.breadCLinks.length - 1].name)
@@ -35,7 +33,7 @@ export class BreadCrumbsComponent extends React.Component {
           </h2>
   
           <nav className="breadcrumbs" aria-label="breadcrumb">
-            <ol className="breadcrumb" onClick={this.props.checkURL}>
+            <ol className="breadcrumb">
               {crumbs.map((x, key) => (
                 <li className="breadcrumb-item" key={key + "_li"}>
                   <Link to={x.click} key={key}>
@@ -45,6 +43,12 @@ export class BreadCrumbsComponent extends React.Component {
               ))}
             </ol>
           </nav>
+
+          <br></br>
+          <br></br>
+          <Link className="fonsS1 banner_btn" onClick={() => { window.history.back() }}>
+                          Go Back
+                        </Link>
         </div>
       )
     ) : (

@@ -25,10 +25,6 @@ export class HomeComponent extends React.Component {
     }
   }
 
-  breadCrumbLinks() {
-    this.props.onHeaderClick();
-  }
-
   addFilter(event) {
     const classN = event.target.id;
     const projTypes = Object.values(projectData.ProjectTypes);
@@ -54,13 +50,9 @@ export class HomeComponent extends React.Component {
     }
   }
 
-  breadCrumbLinks() {
-    this.props.onHeaderClick();
-  }
-
   render() {
     return (
-      <div onClick={this.breadCrumbLinks.bind(this)}>
+      <div >
         <section className="projects_area p_120">
           <div className="container">
             <div className="main_title">

@@ -13,27 +13,18 @@ export default class HeaderComponent extends React.Component {
     };
   }
 
-  componentDidMount() {
-    this.breadCrumbLinks();
-  }
-
   projectsList() {
     this.setState({ showProjects: true });
-  }
-  breadCrumbLinks() {
-    this.props.onHeaderClick();
   }
 
   popupClose() {
     this.setState({ showProjects: false });
-    this.breadCrumbLinks();
   }
   render() {
     return (
       <section className="navigation">
         <div
           className="nav-container"
-          onClick={this.breadCrumbLinks.bind(this)}
         >
           <div className="brand">
             <Link to="/">
