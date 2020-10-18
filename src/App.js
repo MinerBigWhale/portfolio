@@ -203,8 +203,6 @@ export class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-          <Route exact path="/contact" component={ContactComponent}></Route>
-          <Route exact path="/media" component={MediaComponent}></Route>
         <AppContainer 
             breadCrumbsLink={this.breadCrumbsLink.bind(this)}>
           <HeaderComponent />
